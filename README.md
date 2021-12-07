@@ -28,8 +28,7 @@ password: "password"
 url = "http://192.168.10.1/"
 ```
 
-以下のようにcronを使って定期実行することができます。
+以下のようにcronを使って定期実行することができます。aterm-resetter.shのユーザー名やパスは環境に合わせて修正してください。
 ```
 12 3 * * * $HOME/aterm-resetter/aterm-resetter.sh >> /tmp/cron.log 2>&1
 ```
-
