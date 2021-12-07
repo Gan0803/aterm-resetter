@@ -9,8 +9,10 @@ from selenium.webdriver.common.by import By
 import urllib
 import re
 import yaml
+import os.path
 
-with open("secrets.yaml") as file:
+BASE_DIR = os.path.realpath(os.path.dirname(__file__))
+with open(BASE_DIR + "/secrets.yaml") as file:
 	yaml_dict = yaml.safe_load(file)
 	username, password, url = yaml_dict["username"], yaml_dict["password"], yaml_dict["url"]
 
