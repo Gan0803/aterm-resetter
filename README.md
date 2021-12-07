@@ -8,6 +8,12 @@
 
 `pip install -r requirements.txt`で必要なパッケージをインストールしてください。
 
+環境によってはrustや以下のライブラリを追加でインストールする必要があるかもしれません。
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt install -y libssl-dev libreadline-dev libsqlite3-dev
+```
+
 aterm-resetter.pyと同じディレクトリにsecrets.yamlファイルを作成し、以下の情報を記載してください。
 
 ```
@@ -15,3 +21,9 @@ username: "username"
 password: "password"
 url = "http://192.168.10.1/"
 ```
+
+以下のようにcronを使って定期実行することができます。
+```
+12 3 * * * $HOME/aterm-resetter/aterm-resetter.sh >> /tmp/cron.log 2>&1
+```
+
