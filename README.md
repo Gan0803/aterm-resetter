@@ -1,12 +1,18 @@
 # これは何？
 
 ルーター（Aterm WG1200HS4）を再起動するスクリプトです。
+seleniumを使って管理画面にログインし再起動操作を行います。
 
 # どうやって使う？
 
 本スクリプトはpython 3.8.12で動作します。
 
 `pip install -r requirements.txt`で必要なパッケージをインストールしてください。
+
+本スクリプトはchromeを使って動作するため、chromiumとchromedriverをインストールしてください。
+```
+sudo apt install chromium chromium-chromedriver
+```
 
 環境によってはrustや以下のライブラリを追加でインストールする必要があるかもしれません。
 ```
